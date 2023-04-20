@@ -38,18 +38,18 @@ int main()
 void dualSortedSearch(int A[], int size, int K, int dualIndex[])
 {
    // Write your code here
-   int left, right, current_sum; //initializing the left right and sum variables
+   int left, right; //initializing the left right and sum variables
 
    left = 0 ; //setting the left from zero
    right = size - 1; //setting the right starting from the max number.
 
    while(i<j){ //for as long as i is smaller than j, then theres a chance that left + right = k
-       if(current_sum = left + right == K){ // if left + right = k then..
+       if(A[left] + A[right] == K){ // if left + right = k then..
             dualIndex[0] = left;
             dualIndex[1] = right;
             return;
         }
-        else if(current_sum < K){ //if the sum is still smaller than k, we simply add onto the left
+        else if(A[left] + A[right] < K){ //if the sum is still smaller than k, we simply add onto the left
             left++;
         }
         else{// if it is too large, we make the number smaller.
