@@ -37,7 +37,7 @@ void dualSearch(int A[], int size, int K, int dualIndex[])
    int i, j;
 
    for(i = 0; i < size; i++){
-    for(j=i; j<size; j++){
+    for(j = i + 1; j < size - i; j++){
         if(A[i]+A[j]==K){
             dualIndex[0] = i;
             dualIndex[1] = j;
